@@ -1,0 +1,23 @@
+[toolchain]
+
+[features]
+seeds = false
+skip-lint = false
+
+[programs.localnet]
+split_or_steal = "SRSPsMqHaSLJjPNKEoQbTeF6TSvospw2PXGkfj4VzhD"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "Localnet"
+wallet = "~/.config/solana/LoTGxrgiq14jWvkZeY9s4ajZDTwQikP8NLQHT9wqE91.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+setup = "yarn run ts-node scripts/setup.ts"
+create_and_mint = "yarn run ts-node scripts/create_and_mint.ts"
+revoke_and_init = "yarn run ts-node scripts/revoke_auth_and_init_vault.ts"
+upload_metadata = "yarn run ts-node scripts/upload_metadata.ts"
+play_game = "yarn run ts-node scripts/play_game.ts"

@@ -1,0 +1,25 @@
+[package]
+name = "split_or_steal"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "split_or_steal"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = { version = "0.29.0", features = ["init-if-needed"] }
+solana-program = "*"
+anchor-spl = "0.29.0"
+rand_chacha = "0.3.1"
+rand = "0.8.5"
+num = "0.4.3"
+solana-security-txt = "1.1.1"
